@@ -185,7 +185,7 @@ def calculate_population_difference(input_df, input_year):
 
 #######################
 # Dashboard Main Panel
-col = st.columns((1.5, 4.5, 2), gap='medium')
+col = st.columns((1, 5 , 2), gap='medium')
 
 with col[0]:
     st.markdown('#### Gains/Losses')
@@ -255,7 +255,7 @@ with col[2]:
     st.dataframe(df_selected_year_sorted,
                  column_order=("states", "population"),
                  hide_index=True,
-                 width=None,
+                 use_container_width=True,
                  column_config={
                     "states": st.column_config.TextColumn(
                         "States",
